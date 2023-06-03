@@ -1,0 +1,14 @@
+pipeline{
+    agent any
+    stages {
+    
+        stage('installing Angular dependancies'){
+       
+      steps  {
+            
+            sh 'npm install'
+            sh 'ng build --prod'
+        }
+    }
+    }
+}
